@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:45:09 by ahammam           #+#    #+#             */
-/*   Updated: 2022/06/20 16:37:27 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/06/20 19:00:12 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,8 @@ int ft_sleep(long s_time, t_philo *ph)
         if (ph->param->time_to_die < ((current_time - ph->param->start_time) - ph->last_meal))
         {
             pthread_mutex_lock(ph->death);
-            printer(ph, DEAD);
+            if (*(ph->alive) == true)
+                printer(ph, DEAD);
             *(ph->alive) = false;
             pthread_mutex_unlock(ph->death);
             return (1);

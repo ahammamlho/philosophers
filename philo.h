@@ -14,15 +14,6 @@
 #define THINKING 4
 #define DEAD 5
 
-// typedef enum
-// {
-//     TAKEN_FORK = 1,
-//     EATING = 2,
-//     SLEEPING = 3,
-//     THINKING = 4,
-//     DEAD = 5,
-// } ;
-
 typedef struct s_param
 {
     int philos_nbr;

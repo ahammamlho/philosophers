@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:45:09 by ahammam           #+#    #+#             */
-/*   Updated: 2022/06/20 19:00:12 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/06/21 21:56:59 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ long get_time()
 int free_data(t_philo *ph)
 {
     int i;
-    int philo;
+    int philo_nbr;
 
     i = 0;
-    philo = ph[0].param->philos_nbr;
-    while (i < philo)
+    philo_nbr = ph[0].param->philos_nbr;
+    while (i < philo_nbr)
     {
         if (ph[i].right_fork != NULL)
             free(ph[i].right_fork);
@@ -60,8 +60,8 @@ int free_data(t_philo *ph)
         free(ph->alive);
     if (ph->print != NULL)
         free(ph->print);
-    if (ph->death != NULL)
-        free(ph->death);
+    // if (ph->death != NULL)
+    //     free(ph->death);
     if (ph != NULL)
         free(ph);
     return (0);
@@ -80,11 +80,9 @@ int ft_sleep(long s_time, t_philo *ph)
             return (1);
         if (ph->param->time_to_die < ((current_time - ph->param->start_time) - ph->last_meal))
         {
-            pthread_mutex_lock(ph->death);
-            if (*(ph->alive) == true)
-                printer(ph, DEAD);
-            *(ph->alive) = false;
-            pthread_mutex_unlock(ph->death);
+            // pthread_mutex_lock(ph->death);
+            printer(ph, DEAD);
+            // pthread_mutex_unlock(ph->death);
             return (1);
         }
         usleep(150);

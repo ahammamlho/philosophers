@@ -6,9 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Tue Jun 21 21:43:17 2022
+# Make data base, printed on Wed Jun 22 22:05:39 2022
 
 # Variables
 
@@ -29,7 +28,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/ahammam/Desktop/1337 projet/Philosophers
+CURDIR := /Users/ahammam/Desktop/1337 projet/philosophers
 # makefile
 SHELL = /bin/sh
 # makefile (from `Makefile', line 19)
@@ -47,10 +46,9 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
- 
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/1h/tyl226416d9ds5lh7hf5b9n80000gn/T/vscode-ipc-a9a16948-09bb-4f3e-bd32-c27b906cf42b.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/1h/tyl226416d9ds5lh7hf5b9n80000gn/T/vscode-ipc-e10bca07-6e26-4e00-9cf2-9ec58d4005da.sock
 # environment
-VSCODE_CWD = /Users/ahammam/ads
+VSCODE_CWD = /Users/ahammam/Desktop/1337 projet
 # makefile (from `Makefile', line 14)
 OBJES = ${SRCS:.c=.o}
 # environment
@@ -72,7 +70,7 @@ CONDA_EXE = /Users/ahammam/opt/anaconda3/bin/conda
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/ahammam/Desktop/1337 projet/Philosophers
+PWD = /Users/ahammam/Desktop/1337 projet/philosophers
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -111,7 +109,6 @@ LC_TERMINAL = iTerm2
 SRCS = main.c utils.c threads.c actions.c				
 # environment
 SHLVL = 3
- 
 # makefile (from `Makefile', line 17)
 CC = cc
 # default
@@ -123,7 +120,7 @@ USER = ahammam
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t1p0:3AB3E60A-DDCD-493D-82AD-879D27244BA6
+TERM_SESSION_ID = w0t0p0:1C5F4832-0A08-4752-A3D2-173ABEA4992E
 # makefile (from `Makefile', line 16)
 NAME = philo
 # environment
@@ -153,7 +150,7 @@ MFLAGS = -Rrqp
 # environment
 TERM_PROGRAM_VERSION = 3.4.15
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.6014115.6014121.3B65BF12-CD5F-4FE8-937E-4CADEC41188F
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.6014115.6014121.B07472F6-36BE-4CB0-B110-320D377469E2
 # environment
 LC_TERMINAL_VERSION = 3.4.15
 # automatic
@@ -161,7 +158,7 @@ LC_TERMINAL_VERSION = 3.4.15
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t1p0:3AB3E60A-DDCD-493D-82AD-879D27244BA6
+ITERM_SESSION_ID = w0t0p0:1C5F4832-0A08-4752-A3D2-173ABEA4992E
 # environment
 COLORFGBG = 7;0
 # environment
@@ -207,7 +204,7 @@ LANG = C
 
 # Directories
 
-# . (device 16777229, inode 9225346): 15 files, no impossibilities.
+# . (device 16777229, inode 10710397): 15 files, no impossibilities.
 
 # 15 files, no impossibilities in 1 directories.
 
@@ -234,7 +231,7 @@ all: philo
 
 philo: main.o utils.o threads.o actions.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-21 21:40:54
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -247,8 +244,7 @@ philo: main.o utils.o threads.o actions.o
 # Not a target:
 utils.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-21 21:36:07
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -262,11 +258,10 @@ utils.c:
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 20:38:39
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
@@ -278,7 +273,7 @@ main.c:
 actions.o: actions.c philo.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `actions'
-#  Last modified 2022-06-21 21:40:54
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -290,7 +285,7 @@ actions.o: actions.c philo.h
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 21:40:51
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -308,9 +303,8 @@ fclean: clean
 threads.o: threads.c philo.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `threads'
-#  Last modified 2022-06-21 21:40:54
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
- 
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -325,9 +319,10 @@ threads.o: threads.c philo.h
 #  File has not been updated.
 
 # Not a target:
+ 
 philo.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 21:07:24
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -336,7 +331,7 @@ philo.h:
 # Not a target:
 actions.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 21:00:13
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -360,7 +355,7 @@ clean:
 utils.o: utils.c philo.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `utils'
-#  Last modified 2022-06-21 21:40:54
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -372,7 +367,7 @@ utils.o: utils.c philo.h
 main.o: main.c philo.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `main'
-#  Last modified 2022-06-21 21:40:54
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -384,7 +379,7 @@ main.o: main.c philo.h
 # Not a target:
 threads.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 21:35:30
+#  Last modified 2022-06-22 22:05:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -393,7 +388,6 @@ threads.c:
 # files hash-table stats:
 # Load=18/1024=2%, Rehash=0, Collisions=4/63=6%
 # VPATH Search Paths
- 
 
 # No `vpath' search paths.
 
@@ -404,6 +398,6 @@ threads.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Jun 21 21:43:17 2022
+# Finished Make data base on Wed Jun 22 22:05:39 2022
 
  

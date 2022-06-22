@@ -6,14 +6,15 @@
 #    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 21:40:40 by ahammam           #+#    #+#              #
-#    Updated: 2022/06/21 21:40:51 by ahammam          ###   ########.fr        #
+#    Updated: 2022/06/22 22:13:03 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= 	main.c utils.c threads.c actions.c				
+SRCS			= 	philo/main.c \
+					philo/utils.c philo/threads.c philo/routine.c				
 OBJES 		= ${SRCS:.c=.o}
 
-NAME 		= philo
+NAME 		= philoo
 CC 			= cc
 CFLAGS 		= -Wall -Wextra -Werror
 RM 			= rm -rf
@@ -32,7 +33,7 @@ clean		:
 				$(RM) $(OBJES)
 
 fclean		:	clean
-				$(RM) $(NAME)
+				$(RM) philo/$(NAME)
 
 re			:	clean all
 

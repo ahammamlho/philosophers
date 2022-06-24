@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:45:09 by ahammam           #+#    #+#             */
-/*   Updated: 2022/06/21 21:56:59 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/06/24 11:52:32 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ int free_data(t_philo *ph)
         free(ph->alive);
     if (ph->print != NULL)
         free(ph->print);
-    // if (ph->death != NULL)
-    //     free(ph->death);
     if (ph != NULL)
         free(ph);
     return (0);
@@ -80,9 +78,7 @@ int ft_sleep(long s_time, t_philo *ph)
             return (1);
         if (ph->param->time_to_die < ((current_time - ph->param->start_time) - ph->last_meal))
         {
-            // pthread_mutex_lock(ph->death);
             printer(ph, DEAD);
-            // pthread_mutex_unlock(ph->death);
             return (1);
         }
         usleep(150);

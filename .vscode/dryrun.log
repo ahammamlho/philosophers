@@ -1,10 +1,10 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/ahammam/Desktop/1337 projet/philosophers'
-cc -Wall -Wextra -Werror -c main.c -o main.o
-cc -Wall -Wextra -Werror -c utils.c -o utils.o
-cc -Wall -Wextra -Werror -c threads.c -o threads.o
-cc -Wall -Wextra -Werror -c actions.c -o actions.o
-cc main.o utils.o threads.o actions.o -o philo
+cc -Wall -Wextra -Werror   -c -o philo/main.o philo/main.c
+cc -Wall -Wextra -Werror   -c -o philo/utils.o philo/utils.c
+cc -Wall -Wextra -Werror   -c -o philo/threads.o philo/threads.c
+cc -Wall -Wextra -Werror   -c -o philo/routine.o philo/routine.c
+cc philo/main.o philo/utils.o philo/threads.o philo/routine.o -o philoo
 clear
 make: Leaving directory `/Users/ahammam/Desktop/1337 projet/philosophers'
  

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   actions.c                                          :+:      :+:    :+:   */
+/*   routine.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:36:14 by ahammam           #+#    #+#             */
-/*   Updated: 2022/06/21 21:53:18 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/06/24 11:43:39 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ static int eating(t_philo *ph)
         printer(ph, TAKEN_FORK);
     if (*(ph->alive) == true)
         printer(ph, EATING);
+    ph->last_meal = get_time() - ph->param->start_time;
     if (ft_sleep(ph->param->time_to_eat, ph))
     {
         pthread_mutex_unlock(ph->right_fork);
         pthread_mutex_unlock(ph->left_fork);
         return (1);
     }
-    ph->last_meal = get_time() - ph->param->start_time;
     pthread_mutex_unlock(ph->right_fork);
     pthread_mutex_unlock(ph->left_fork);
     ph->meals_eaten++;

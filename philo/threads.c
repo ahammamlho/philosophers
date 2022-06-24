@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:11:01 by ahammam           #+#    #+#             */
-/*   Updated: 2022/06/21 21:53:03 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/06/24 11:52:48 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ static int fill_philo(t_philo *philo, t_param *par)
         philo[i].left_fork = philo[(i + 1) % par->philos_nbr].right_fork;
         philo[i].alive = philo[0].alive;
         philo[i].print = philo[0].print;
-        // philo[i].death = philo[0].death;
         philo[i].param = par;
         philo[i].last_meal = 0;
         philo[i].meals_eaten = 0;
@@ -48,14 +47,11 @@ t_philo *create_philo(t_param *param)
     philo = (t_philo *)malloc(sizeof(t_philo) * param->philos_nbr);
     philo->alive = (bool *)malloc(sizeof(bool));
     philo->print = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
-    // philo->death = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
-    if (!philo || !philo->alive || !philo->print) // || !philo->death
+    if (!philo || !philo->alive || !philo->print)
         return (NULL);
     *(philo->alive) = true;
     if (pthread_mutex_init(philo->print, NULL))
         return (NULL);
-    // if (pthread_mutex_init(philo->death, NULL))
-    //     return (NULL);
     if (fill_philo(philo, param))
         return (NULL);
     return (philo);
@@ -74,7 +70,6 @@ int join_philo(t_philo *philo, int ph)
         i++;
     }
     pthread_mutex_destroy(philo->print);
-    // pthread_mutex_destroy(philo->death);
     return (0);
 }
 

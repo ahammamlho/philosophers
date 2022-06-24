@@ -1,10 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/ahammam/Desktop/1337 projet/philosophers'
-cc -Wall -Wextra -Werror   -c -o philo/main.o philo/main.c
-cc -Wall -Wextra -Werror   -c -o philo/utils.o philo/utils.c
-cc -Wall -Wextra -Werror   -c -o philo/threads.o philo/threads.c
-cc -Wall -Wextra -Werror   -c -o philo/routine.o philo/routine.c
-cc philo/main.o philo/utils.o philo/threads.o philo/routine.o -o philoo
-clear
 make: Leaving directory `/Users/ahammam/Desktop/1337 projet/philosophers'
  
+make: *** No targets specified and no makefile found.  Stop.
+

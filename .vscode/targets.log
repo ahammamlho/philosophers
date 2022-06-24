@@ -7,10 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `philo/main.o', needed by `philoo'.  Stop.
+make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Jun 24 11:25:05 2022
+# Make data base, printed on Fri Jun 24 12:13:24 2022
 
 # Variables
 
@@ -34,16 +34,12 @@ VSCODE_LOG_NATIVE = false
 CURDIR := /Users/ahammam/Desktop/1337 projet/philosophers
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 22)
-RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 21)
-CFLAGS = -Wall -Wextra -Werror
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+# makefile
+MAKEFILE_LIST := 
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -52,8 +48,6 @@ __CFBundleIdentifier = com.microsoft.VSCode
 VSCODE_IPC_HOOK_EXTHOST = /var/folders/1h/tyl226416d9ds5lh7hf5b9n80000gn/T/vscode-ipc-a466ce46-6043-4edb-ac16-fe86abbc7863.sock
 # environment
 VSCODE_CWD = /Users/ahammam/ads
-# makefile (from `Makefile', line 14)
-OBJES = ${SRCS:.c=.o}
 # environment
 PATH = /Users/ahammam/opt/anaconda3/bin:/Users/ahammam/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/opt/homebrew/bin:/Users/ahammam/FlutterDev/flutter/bin
 # environment
@@ -108,26 +102,18 @@ COLORTERM = truecolor
 MAKE = $(MAKE_COMMAND)
 # environment
 LC_TERMINAL = iTerm2
-# makefile (from `Makefile', line 13)
-SRCS = philo/main.c philo/utils.c philo/threads.c philo/routine.c				
 # environment
 SHLVL = 3
-# makefile (from `Makefile', line 20)
-CC = cc
-# makefile (from `Makefile', line 16)
-OBJES_B = ${SRCS_B:.c=.o}
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = ahammam
 # makefile
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := 
 # default
 MAKECMDGOALS := all
 # environment
 TERM_SESSION_ID = w0t1p0:3AB3E60A-DDCD-493D-82AD-879D27244BA6
-# makefile (from `Makefile', line 18)
-NAME = philoo
 # environment
 LESS = -R
 # automatic
@@ -135,7 +121,6 @@ LESS = -R
 # environment
 CONDA_SHLVL = 1
 # default
- 
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # environment
 TERM_PROGRAM = iTerm.app
@@ -189,8 +174,6 @@ CONDA_PYTHON_EXE = /Users/ahammam/opt/anaconda3/bin/python
 SUFFIXES := 
 # environment
 _CE_M = 
-# makefile (from `Makefile', line 15)
-SRCS_B = philo_bonus/main.c
 # environment
 MAKELEVEL := 0
 # environment
@@ -201,12 +184,10 @@ TERM = xterm-256color
 VSCODE_PID = 40015
 # environment
 _CE_CONDA = 
-# makefile (from `Makefile', line 19)
-NAME_B = philo_bonuss
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=95/1024=9%, Rehash=0, Collisions=5/126=4%
+# Load=86/1024=8%, Rehash=0, Collisions=5/106=5%
 
 # Pattern-specific Variable Values
 
@@ -214,58 +195,24 @@ LANG = C
 
 # Directories
 
-# . (device 16777229, inode 10710397): 8 files, 1 impossibilities.
-# philo (device 16777229, inode 10710705): 4 files, no impossibilities so far.
+# . (device 16777229, inode 10710397): 6 files, no impossibilities.
 
-# 12 files, 1 impossibilities in 2 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-%.o: %.c philo.h
-#  commands to execute (from `Makefile', line 25):
-	$(CC) ${CFLAGS} -c $< -o $@
-	
-
-# 1 implicit rules, 0 (0.0%) terminal.
+# No implicit rules.
 
 # Files
 
 # Not a target:
-philo/routine.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-all: philoo
-#  Phony target (prerequisite of .PHONY).
+all:
 #  Command-line target.
-#  Implicit rule search has not been done.
+#  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-philoo: philo/main.o philo/utils.o philo/threads.o philo/routine.o
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 31):
-	$(CC) $(OBJES) -o $(NAME)
-	clear
-	
-
-.PHONY: all clean fclean re
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-philo/utils.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -275,38 +222,23 @@ philo/utils.o:
 
 # Not a target:
 Makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-06-22 22:59:18
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-philo/threads.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-bonus: philo_bonuss
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-fclean: clean
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
+makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
 #  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 44):
-	$(RM) $(NAME) $(NAME_B)
-	
-
-# Not a target:
-philo_bonus/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -314,51 +246,29 @@ philo_bonus/main.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-re: clean all
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-clean:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 41):
-	$(RM) $(OBJES) $(OBJES_B)
-	
-
-philo_bonuss: philo_bonus/main.o
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 35):
-	$(CC) $(OBJES_B) -o $(NAME_B)
-	clear
-	
-
 # Not a target:
-philo/main.o:
+GNUmakefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=16/1024=2%, Rehash=0, Collisions=0/47=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# # of strings in strcache: 0
+# # of strcache buffers: 0
+# strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
+# strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Jun 24 11:25:05 2022
+# Finished Make data base on Fri Jun 24 12:13:24 2022
 
  

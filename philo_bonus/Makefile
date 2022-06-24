@@ -6,11 +6,11 @@
 #    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 21:40:40 by ahammam           #+#    #+#              #
-#    Updated: 2022/06/24 12:13:09 by ahammam          ###   ########.fr        #
+#    Updated: 2022/06/24 16:47:37 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS_B		=   main.c
+SRCS_B		=   philo_bonus.c utils_bonus.c processes.c actions_bonus.c
 OBJES_B 	=   ${SRCS_B:.c=.o}
 
 NAME_B 		=   philo_bonus
